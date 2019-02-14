@@ -1,0 +1,86 @@
+#root {
+  text-align: center;
+}
+
+.calc-wrap {
+  display: block;
+  height: 475px;
+  width: 300px;
+  margin: 0 auto;
+  border: 10px solid #ccc;
+  border-radius: 10px;
+
+  .flex {
+    display: flex;
+  }
+
+  &__screen {
+    cursor: default;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.780392);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #2ecc71;
+    text-shadow: 0 0 10px #2ecc71;
+    font-size: 35px;
+    overflow: hidden;
+    font-family: "Orbitron", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    width: calc(100% - 20px);
+    border: none;
+    text-align-last: right;
+    padding: 10px;
+    direction: rtl;
+
+    p {
+      margin: 0 10px;
+    }
+  }
+
+  &__btn-wrap {
+    button {
+      height: 75px;
+      width: 75px;
+      color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.35);
+      background: yellowgreen;
+      transition: ease all 100ms;
+      font-family: "Orbitron", Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.30980392156862746);
+      }
+    }
+
+    .pink {
+      background: rgba(142, 68, 173, 0.6);
+    }
+    .extend {
+      background: grey;
+      cursor: default;
+
+      &:hover {
+        transform: scale(1);
+        box-shadow: initial;
+      }
+    }
+
+    .leftwrapp,
+    rightwrapp {
+      height: 375px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    [value="clear"] {
+      width: 150px;
+      background: #f1c40f;
+    }
+  }
+}
