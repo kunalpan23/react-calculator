@@ -17,7 +17,7 @@
   &__screen {
     cursor: default;
     height: 80px;
-    background: rgba(0, 0, 0, 0.780392);
+    background: #000;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -39,12 +39,18 @@
   }
 
   &__btn-wrap {
+    flex-direction: column;
+
+    .row {
+      display: flex;
+    }
+
     button {
       height: 75px;
       width: 75px;
-      color: #fff;
+      color: rgba(255, 255, 255, 0.7);
       border: 1px solid rgba(0, 0, 0, 0.35);
-      background: yellowgreen;
+      background: black;
       transition: ease all 100ms;
       font-family: "Orbitron", Arial, Helvetica, sans-serif;
       font-weight: 400;
@@ -53,21 +59,8 @@
       outline: none;
 
       &:hover {
-        transform: scale(1.02);
-        box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.30980392156862746);
-      }
-    }
-
-    .pink {
-      background: rgba(142, 68, 173, 0.6);
-    }
-    .extend {
-      background: grey;
-      cursor: default;
-
-      &:hover {
-        transform: scale(1);
-        box-shadow: initial;
+        color: #fff;
+        text-shadow: 0 0 10px #fff;
       }
     }
 
@@ -80,7 +73,6 @@
 
     [value="clear"] {
       width: 150px;
-      background: #f1c40f;
     }
   }
 }

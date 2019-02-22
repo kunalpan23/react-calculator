@@ -4,7 +4,7 @@ export default class Buttons extends Component {
   render() {
     return (
       <div className="flex calc-wrap__btn-wrap">
-        <div className="leftwrapp">
+        <div className="row">
           <button
             className="buttons"
             value="clear"
@@ -19,6 +19,16 @@ export default class Buttons extends Component {
           >
             -
           </button>
+          <button
+            className="buttons pink"
+            value="/"
+            onClick={this.props.getInput}
+          >
+            /
+          </button>
+        </div>
+
+        <div className="row">
           <button className="buttons" onClick={this.props.getInput} value="7">
             7
           </button>
@@ -28,7 +38,16 @@ export default class Buttons extends Component {
           <button className="buttons" onClick={this.props.getInput} value="9">
             9
           </button>
+          <button
+            className="buttons pink"
+            value="+"
+            onClick={this.props.getInput}
+          >
+            +
+          </button>
+        </div>
 
+        <div className="row">
           <button className="buttons" onClick={this.props.getInput} value="4">
             4
           </button>
@@ -38,7 +57,16 @@ export default class Buttons extends Component {
           <button className="buttons" onClick={this.props.getInput} value="6">
             6
           </button>
+          <button
+            className="buttons pink"
+            onClick={this.props.getInput}
+            value="."
+          >
+            .
+          </button>
+        </div>
 
+        <div className="row">
           <button className="buttons" onClick={this.props.getInput} value="1">
             1
           </button>
@@ -48,34 +76,6 @@ export default class Buttons extends Component {
           <button className="buttons" onClick={this.props.getInput} value="3">
             3
           </button>
-          <button className="buttons extend" />
-          <button className="buttons" onClick={this.props.getInput} value="0">
-            0
-          </button>
-          <button className="buttons extend" />
-        </div>
-        <div className="rightwrapp">
-          <button
-            className="buttons pink"
-            value="/"
-            onClick={this.props.getInput}
-          >
-            /
-          </button>
-          <button
-            className="buttons pink"
-            value="+"
-            onClick={this.props.getInput}
-          >
-            +
-          </button>
-          <button
-            className="buttons pink"
-            onClick={this.props.getInput}
-            value="."
-          >
-            .
-          </button>
           <button
             className="buttons pink"
             value="equal"
@@ -83,7 +83,14 @@ export default class Buttons extends Component {
           >
             =
           </button>
+        </div>
 
+        <div className="row">
+          <button className="buttons extend" />
+          <button className="buttons" onClick={this.props.getInput} value="0">
+            0
+          </button>
+          <button className="buttons extend" />
           <button className="buttons extend" />
         </div>
       </div>
